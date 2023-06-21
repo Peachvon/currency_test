@@ -9,7 +9,7 @@ class CurrencyRepo {
   final BaseApiService _apiService = NetworkApiService();
 
   Future<CurrentPriceModel> fetchApi() async {
-    var respons = await _apiService.getResponse("bpi/currentprice.json");
+    var respons = await _apiService.getResponse("v1/bpi/currentprice.json");
     CurrentPriceModel data = currentPriceModelFromJson(respons);
 
     return data;
